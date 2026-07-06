@@ -1,0 +1,8 @@
+{
+  "name": "ToolsChahiye - AI Multi-Tools Platform",
+  "description": "A professional, fast, modern, and SEO-friendly platform hosting 100+ AI, PDF, Image, and Developer tools.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

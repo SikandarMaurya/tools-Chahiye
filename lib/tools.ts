@@ -1,0 +1,239 @@
+import { Search, Zap, Shield, Sparkles, FileText, Image as ImageIcon, Code, ArrowRight, LayoutGrid, CheckCircle2, Target, Type, Wrench } from "lucide-react";
+import { LucideIcon } from "lucide-react";
+
+export interface Tool {
+  id: string;
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  href: string;
+  isNew?: boolean;
+  isPopular?: boolean;
+}
+
+export interface Category {
+  id: string;
+  name: string;
+  description: string;
+  icon: LucideIcon;
+  href: string;
+  tools: Tool[];
+}
+
+export const toolsData: Category[] = [
+  {
+    id: "ai-tools",
+    name: "AI Tools",
+    description: "Next-gen AI powered tools for creators and professionals.",
+    icon: Sparkles,
+    href: "/ai-tools",
+    tools: [
+      {
+        id: "ai-image-generator",
+        title: "AI Image Generator",
+        description: "Generate stunning AI images, thumbnails, and logos from text prompts.",
+        icon: ImageIcon,
+        href: "/ai-tools/ai-image-generator",
+        isNew: true,
+        isPopular: true,
+      },
+      {
+        id: "ai-content-summarizer",
+        title: "AI Content Summarizer",
+        description: "Instantly summarize long articles, documents, and text into key points.",
+        icon: FileText,
+        href: "/ai-tools/ai-content-summarizer",
+      },
+      {
+        id: "background-remover",
+        title: "AI Image Background Remover",
+        description: "Remove background from any image instantly using AI.",
+        icon: ImageIcon,
+        href: "/ai-tools/background-remover",
+        isNew: true,
+      }
+    ],
+  },
+  {
+    id: "pdf-tools",
+    name: "PDF Utilities",
+    description: "Essential tools to manage, convert, and edit PDF documents.",
+    icon: FileText,
+    href: "/pdf-tools",
+    tools: [
+      {
+        id: "merge-pdf",
+        title: "Merge PDF",
+        description: "Combine multiple PDF files instantly and securely.",
+        icon: FileText,
+        href: "/pdf-tools/merge-pdf",
+        isNew: true,
+        isPopular: true,
+      },
+      {
+        id: "jpg-to-pdf",
+        title: "JPG to PDF",
+        description: "Convert JPG, PNG, and other images to PDF.",
+        icon: FileText,
+        href: "/pdf-tools/jpg-to-pdf",
+      },
+      {
+        id: "pdf-to-jpg",
+        title: "PDF to JPG",
+        description: "Convert PDF pages to high-quality JPG images.",
+        icon: FileText,
+        href: "/pdf-tools/pdf-to-jpg",
+      },
+      {
+        id: "split-pdf",
+        title: "Split PDF",
+        description: "Extract pages from PDF or split PDFs instantly.",
+        icon: FileText,
+        href: "/pdf-tools/split-pdf",
+        isNew: true,
+      },
+      {
+        id: "compress-pdf",
+        title: "Compress PDF",
+        description: "Reduce PDF file size while maintaining quality.",
+        icon: FileText,
+        href: "/pdf-tools/compress-pdf",
+        isNew: true,
+      },
+      {
+        id: "pdf-to-word",
+        title: "PDF to Word",
+        description: "Convert PDF files to editable Word documents.",
+        icon: FileText,
+        href: "/pdf-tools/pdf-to-word",
+        isNew: true,
+      },
+      {
+        id: "word-to-pdf",
+        title: "Word to PDF",
+        description: "Convert Word documents to professional PDF files.",
+        icon: FileText,
+        href: "/pdf-tools/word-to-pdf",
+        isNew: true,
+      },
+      {
+        id: "pdf-to-excel",
+        title: "PDF to Excel",
+        description: "Convert PDF tables into editable Excel spreadsheets.",
+        icon: FileText,
+        href: "/pdf-tools/pdf-to-excel",
+        isNew: true,
+      },
+      {
+        id: "powerpoint-to-pdf",
+        title: "PowerPoint to PDF",
+        description: "Convert PowerPoint presentations into professional PDF documents.",
+        icon: FileText,
+        href: "/pdf-tools/powerpoint-to-pdf",
+        isNew: true,
+      },
+      {
+        id: "pdf-to-powerpoint",
+        title: "PDF to PowerPoint",
+        description: "Convert PDF files into editable PowerPoint presentations.",
+        icon: FileText,
+        href: "/pdf-tools/pdf-to-powerpoint",
+        isNew: true,
+      },
+      {
+        id: "pdf-to-image",
+        title: "PDF to Image",
+        description: "Convert PDF pages into high-resolution JPG, PNG, WebP, and TIFF images.",
+        icon: FileText,
+        href: "/pdf-tools/pdf-to-image",
+        isNew: true,
+      }
+    ],
+  },
+  {
+    id: "image-tools",
+    name: "Image Tools",
+    description: "Compress, resize, and optimize images for the web.",
+    icon: ImageIcon,
+    href: "/image-tools",
+    tools: [
+      {
+        id: "image-compressor",
+        title: "AI Image Compressor",
+        description: "Smartly compress JPG, PNG, WebP & AVIF images online without losing quality.",
+        icon: ImageIcon,
+        href: "/image-tools/image-compressor",
+        isNew: true,
+        isPopular: true,
+      }
+    ],
+  },
+  {
+    id: "developer-tools",
+    name: "Developer Tools",
+    description: "Handy tools for developers: formatters, validators, and testers.",
+    icon: Code,
+    href: "/developer-tools",
+    tools: [
+      {
+        id: "json-beautifier",
+        title: "JSON Beautifier",
+        description: "Format, validate, and beautify JSON data.",
+        icon: Code,
+        href: "/developer-tools/json-beautifier",
+        isNew: true,
+      },
+      {
+        id: "regex-tester",
+        title: "Regex Tester",
+        description: "Test and debug Regular Expressions in real-time.",
+        icon: Code,
+        href: "/developer-tools/regex-tester",
+      }
+    ],
+  },
+  {
+    id: "seo-tools",
+    name: "SEO Tools",
+    description: "Boost your website's visibility with SEO generators and analyzers.",
+    icon: Target,
+    href: "/seo-tools",
+    tools: [
+      {
+        id: "seo-meta-generator",
+        title: "AI SEO Meta Generator",
+        description: "Generate complete SEO meta tags, Open Graph, and JSON-LD schema.",
+        icon: Target,
+        href: "/seo-tools/seo-meta-generator",
+        isNew: true,
+      }
+    ],
+  },
+  {
+    id: "text-tools",
+    name: "Text Tools",
+    description: "Format, count, and manipulate text easily.",
+    icon: Type,
+    href: "/text-tools",
+    tools: [],
+  },
+  {
+    id: "utility-tools",
+    name: "Utility Tools",
+    description: "Everyday utility tools and calculators.",
+    icon: Wrench,
+    href: "/utility-tools",
+    tools: [],
+  }
+];
+
+export const allTools: Tool[] = toolsData.flatMap(category => category.tools);
+
+export function searchTools(query: string): Tool[] {
+  if (!query) return [];
+  const lowerQuery = query.toLowerCase();
+  return allTools.filter(tool => 
+    tool.title.toLowerCase().includes(lowerQuery) || 
+    tool.description.toLowerCase().includes(lowerQuery)
+  );
+}
