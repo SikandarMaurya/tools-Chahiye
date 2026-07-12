@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Compress PDF files online with smart optimization. Reduce file size while maintaining quality using advanced compression techniques.',
 };
 
-export default function CompressPdfPage() {
+export default function Page() {
   return (
     <>
       <script

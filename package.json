@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "NODE_OPTIONS='--max-old-space-size=1536' next build",
+    "build": "NODE_ENV=production NODE_OPTIONS='--max-old-space-size=1536' next build",
     "start": "next start",
     "lint": "eslint .",
     "clean": "next clean"
@@ -17,6 +17,8 @@
     "@hookform/resolvers": "^5.2.1",
     "@imgly/background-removal": "^1.7.0",
     "@monaco-editor/react": "^4.7.0",
+    "@pdfsmaller/pdf-decrypt": "^1.0.1",
+    "@pdfsmaller/pdf-encrypt": "^1.0.2",
     "autoprefixer": "^10.4.21",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -35,7 +37,12 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-dropzone": "^15.0.0",
+    "react-easy-crop": "^6.2.2",
+    "react-image-crop": "^11.1.2",
+    "react-rnd": "^10.5.3",
+    "react-signature-canvas": "^1.1.0-alpha.2",
     "tailwind-merge": "^3.3.1",
+    "tesseract.js": "^7.0.0",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {

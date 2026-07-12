@@ -3,7 +3,7 @@ import { Inter, Outfit } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { GlobalBreadcrumbs } from '@/components/global-breadcrumbs';
+import GlobalBreadcrumbs from '@/components/global-breadcrumbs';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });

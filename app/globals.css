@@ -124,4 +124,13 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-display tracking-tight;
   }
+  select {
+    @apply bg-background text-foreground border-border rounded-md px-2 py-1;
+    color: hsl(var(--foreground));
+    background-color: hsl(var(--background));
+  }
+  option {
+    color: hsl(var(--foreground));
+    background-color: hsl(var(--background));
+  }
 }

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Remove background from any image instantly using AI.',
 };
 
-export default function BackgroundRemoverPage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-muted/30 pb-20">
       <div className="bg-background border-b pt-12 pb-8">

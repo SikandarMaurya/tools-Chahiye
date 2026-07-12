@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Merge multiple PDF files online for free. Rearrange pages, preview documents, rotate pages and combine PDFs securely without installing software.',
 };
 
-export default function MergePdfPage() {
+export default function Page() {
   return (
     <>
       <script

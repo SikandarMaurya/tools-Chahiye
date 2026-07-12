@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Generate SEO meta tags, Open Graph tags, Twitter Cards, JSON-LD schema, canonical URLs and optimize your website with AI.',
 };
 
-export default function SeoMetaGeneratorPage() {
+export default function Page() {
   return (
     <>
       <script

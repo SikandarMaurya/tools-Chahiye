@@ -1,17 +1,20 @@
 import { GoogleGenAI } from "@google/genai";
 import { NextRequest, NextResponse } from "next/server";
 
-const ai = new GoogleGenAI({ 
-  apiKey: process.env.GEMINI_API_KEY,
-  httpOptions: {
-    headers: {
-      'User-Agent': 'aistudio-build',
+export function getAI() {
+  return new GoogleGenAI({
+    apiKey: process.env.GEMINI_API_KEY,
+    httpOptions: {
+      headers: {
+        'User-Agent': 'aistudio-build',
+      }
     }
-  }
-});
+  });
+}
 
 export async function POST(req: NextRequest) {
   try {
+    const ai = getAI();
     const body = await req.json();
     const { 
       prompt,
@@ -55,6 +58,7 @@ export async function POST(req: NextRequest) {
           textResponse += part.text;
         }
       }
+
       return imageUrl;
     };
 

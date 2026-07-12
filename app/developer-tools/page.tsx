@@ -3,6 +3,6 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = generateCategoryMetadata('developer-tools');
 
-export default function DeveloperToolsPage() {
+export default function Page() {
   return <CategoryPageTemplate categoryId="developer-tools" />;
 }

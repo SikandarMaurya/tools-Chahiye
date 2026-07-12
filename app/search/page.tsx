@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Search } from "lucide-react";
 
-export default function SearchPage() {
+export default function Page() {
   return (
     <div className="container mx-auto px-4 py-20 max-w-3xl text-center">
       <h1 className="text-4xl font-bold tracking-tight mb-6">Search Tools</h1>

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Convert PDF pages to high-quality JPG images online for free.',
 };
 
-export default function PdfToJpgPage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-muted/30 pb-20">
       <div className="bg-background border-b pt-12 pb-8">

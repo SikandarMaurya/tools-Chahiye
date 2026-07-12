@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Test, debug and validate regular expressions online with live matching, explanations, templates and search & replace.',
 };
 
-export default function RegexTesterPage() {
+export default function Page() {
   return (
     <>
       <script

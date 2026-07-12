@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Format, validate, and beautify JSON data online.',
 };
 
-export default function JsonBeautifierPage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-muted/30 pb-20">
       <div className="bg-background border-b pt-12 pb-8">

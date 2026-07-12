@@ -1,0 +1,37 @@
+import { Sparkles } from 'lucide-react';
+
+// Add this to the top imports if not there.
+
+// Add state for AI panel:
+const [showAIPanel, setShowAIPanel] = useState(false);
+const [aiMode, setAiMode] = useState<'summary' | 'ocr' | 'chat'>('summary');
+const [aiStatus, setAiStatus] = useState<'idle' | 'loading' | 'done'>('idle');
+const [aiResult, setAiResult] = useState('');
+
+const handleSummarize = async () => {
+    setAiStatus('loading');
+    // We can extract text from PDF and send it to the summarize API
+    try {
+        // basic text extraction using pdfjs
+        const loadingTask = pdfjsLib.getDocument({ data: file.bytes.slice(0) });
+        const pdf = await loadingTask.promise;
+        let fullText = '';
+        for (let i = 1; i <= Math.min(pdf.numPages, 10); i++) {
+            const page = await pdf.getPage(i);
+            const textContent = await page.getTextContent();
+            fullText += textContent.items.map((s: any) => s.str).join(' ') + '\n';
+        }
+        
+        const response = await fetch('/api/summarize', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ text: fullText.substring(0, 5000), tone: 'Professional', format: 'Paragraph' })
+        });
+        const data = await response.json();
+        setAiResult(data.summary || data.text || 'No summary generated.');
+        setAiStatus('done');
+    } catch (e) {
+        setAiResult('Failed to generate summary.');
+        setAiStatus('done');
+    }
+};

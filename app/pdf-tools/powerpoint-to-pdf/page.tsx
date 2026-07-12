@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   description: 'Convert PowerPoint presentations into professional PDF documents with high-quality layout preservation, batch conversion and AI-powered optimization.',
 };
 
-export default function PowerPointToPdfPage() {
+export default function Page() {
   return <PowerPointToPdfClient />;
 }

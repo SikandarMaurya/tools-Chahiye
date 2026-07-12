@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Convert PDF tables into editable Excel spreadsheets with AI-powered table detection, OCR support and high accuracy.',
 };
 
-export default function PdfToExcelPage() {
+export default function Page() {
   return (
     <>
       <script

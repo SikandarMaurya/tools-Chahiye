@@ -162,7 +162,7 @@ export default function SplitPdfClient() {
     setIsProcessing(true);
     
     try {
-      const sourcePdf = await PDFDocument.load(pdfBytes);
+      const sourcePdf = await PDFDocument.load(pdfBytes, { ignoreEncryption: true });
       
       if (splitMethod === 'custom') {
         if (selectedPages.size === 0) {

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Split PDF files online for free. Extract selected pages, split by page range, or divide PDFs into multiple documents securely.',
 };
 
-export default function SplitPdfPage() {
+export default function Page() {
   return (
     <>
       <script

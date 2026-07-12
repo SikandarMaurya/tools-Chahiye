@@ -5,7 +5,17 @@ import { usePathname } from 'next/navigation';
 import { ChevronRight, Home } from 'lucide-react';
 import { toolsData } from '@/lib/tools';
 
-export function Breadcrumbs() {
+import { Suspense } from "react";
+
+export default function Breadcrumbs() {
+  return (
+    <Suspense fallback={<div className="h-4" />}>
+      <BreadcrumbsInner />
+    </Suspense>
+  );
+}
+
+function BreadcrumbsInner() {
   const pathname = usePathname();
   
   // Don't show breadcrumbs on home page

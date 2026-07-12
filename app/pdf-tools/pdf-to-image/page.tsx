@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   description: 'Convert PDF pages into JPG, PNG, WebP, AVIF and TIFF images with AI-powered rendering, high DPI export and batch processing.',
 };
 
-export default function PDFToImagePage() {
+export default function Page() {
   return <PDFToImageClient />;
 }

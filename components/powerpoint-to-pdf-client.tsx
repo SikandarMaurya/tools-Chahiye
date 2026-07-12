@@ -335,7 +335,7 @@ export function PowerPointToPdfClient() {
                 <div>
                   <label className="text-sm font-medium mb-2 block">Page Size</label>
                   <select 
-                    className="w-full bg-muted/50 border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    className="bg-background text-foreground w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
                     value={pageSize}
                     onChange={(e) => setPageSize(e.target.value)}
                     disabled={isConverting || success}

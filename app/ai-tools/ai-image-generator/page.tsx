@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Generate stunning AI images, thumbnails, logos, wallpapers and artwork from text prompts using advanced AI models.',
 };
 
-export default function AiImageGeneratorPage() {
+export default function Page() {
   return (
     <>
       <script

@@ -3,6 +3,6 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = generateCategoryMetadata('pdf-tools');
 
-export default function PdfToolsPage() {
+export default function Page() {
   return <CategoryPageTemplate categoryId="pdf-tools" />;
 }

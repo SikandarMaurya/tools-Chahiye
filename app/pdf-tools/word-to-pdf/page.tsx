@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Convert Word documents to professional PDF files online. Preserve formatting, fonts, tables and images with high-quality PDF generation.',
 };
 
-export default function WordToPdfPage() {
+export default function Page() {
   return (
     <>
       <script

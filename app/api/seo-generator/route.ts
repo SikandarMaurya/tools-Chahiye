@@ -1,7 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 import { NextRequest, NextResponse } from "next/server";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+export function getAI() { return new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY }); }
 
 export async function POST(req: NextRequest) {
   try {
@@ -88,6 +88,7 @@ Provide the output as a valid JSON object matching this exact structure:
 Ensure the output language matches the requested Language.
 `;
 
+    const ai = getAI();
     const response = await ai.models.generateContent({
       model: "gemini-2.5-flash",
       contents: prompt,

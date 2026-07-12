@@ -33,6 +33,7 @@ export default function ImageCompressor() {
   const [outputFormat, setOutputFormat] = useState('original');
   const [compressionMode, setCompressionMode] = useState('smart');
   const [customQuality, setCustomQuality] = useState(80);
+  const [targetSize, setTargetSize] = useState<number | ''>('');
   
   const [previewItem, setPreviewItem] = useState<FileItem | null>(null);
   const [isCompressingAll, setIsCompressingAll] = useState(false);
@@ -104,8 +105,15 @@ export default function ImageCompressor() {
         let quality = 0.8;
         if (compressionMode === 'lossless') quality = 1.0;
         else if (compressionMode === 'balanced') quality = 0.7;
-        else if (compressionMode === 'maximum') quality = 0.4;
+        else if (compressionMode === 'maximum' || compressionMode === 'email') quality = 0.4;
+        else if (compressionMode === 'web') quality = 0.75;
+        else if (compressionMode === 'social') quality = 0.85;
         else if (compressionMode === 'custom') quality = customQuality / 100;
+        else if (compressionMode === 'target' && targetSize) {
+          const targetBytes = targetSize * 1024;
+          const ratio = targetBytes / item.originalSize;
+          quality = Math.max(0.1, Math.min(1.0, ratio));
+        }
 
         canvas.toBlob((blob) => {
           if (blob) {
@@ -201,8 +209,8 @@ export default function ImageCompressor() {
               <Zap className="w-8 h-8" />
             </div>
             <div>
-              <h1 className="text-3xl font-bold tracking-tight">AI Image Compressor</h1>
-              <p className="text-muted-foreground mt-1">Compress, resize, and convert your images with smart AI optimization.</p>
+              <h1 className="text-3xl font-bold tracking-tight">Smart Image Compressor</h1>
+              <p className="text-muted-foreground mt-1">Enterprise AI Compression Engine. Optimize, resize, and convert your images smartly.</p>
             </div>
           </div>
         </div>
@@ -344,17 +352,24 @@ export default function ImageCompressor() {
                      {[
                        { id: 'smart', name: 'Smart AI', desc: 'Auto optimization' },
                        { id: 'lossless', name: 'Lossless', desc: 'No quality loss' },
-                       { id: 'balanced', name: 'Balanced', desc: 'Good ratio' },
-                       { id: 'maximum', name: 'Maximum', desc: 'Smallest size' },
+                       { id: 'balanced', name: 'Lossy', desc: 'Maximum reduction' },
+                       { id: 'web', name: 'Web Mode', desc: 'For websites' },
+                       { id: 'social', name: 'Social Media', desc: 'For posts' },
+                       { id: 'email', name: 'Email Mode', desc: 'Smallest attachments' },
+                       { id: 'target', name: 'Target Size', desc: 'Match file size' },
                        { id: 'custom', name: 'Custom', desc: 'Manual control' }
                      ].map(mode => (
                        <button 
                          key={mode.id}
                          onClick={() => setCompressionMode(mode.id)}
-                         className={`p-2 text-left rounded-lg border text-sm transition-all ${compressionMode === mode.id ? 'border-primary bg-primary/10 text-primary' : 'border-border hover:border-primary/50 text-muted-foreground'}`}
+                         className={`p-2 text-left rounded-lg border text-sm transition-all ${
+                           compressionMode === mode.id 
+                             ? 'border-primary bg-primary text-primary-foreground shadow-md' 
+                             : 'border-border hover:border-primary/50 text-muted-foreground bg-background hover:bg-muted/50'
+                         }`}
                        >
-                         <div className="font-semibold">{mode.name}</div>
-                         <div className="text-[10px] opacity-80">{mode.desc}</div>
+                         <div className={`font-semibold ${compressionMode === mode.id ? 'text-primary-foreground' : 'text-foreground'}`}>{mode.name}</div>
+                         <div className={`text-[10px] ${compressionMode === mode.id ? 'opacity-90' : 'opacity-80'}`}>{mode.desc}</div>
                        </button>
                      ))}
                    </div>
@@ -377,17 +392,33 @@ export default function ImageCompressor() {
                    </div>
                  )}
 
+                 {compressionMode === 'target' && (
+                   <div className="bg-muted/50 p-3 rounded-lg border">
+                     <div className="flex justify-between text-sm mb-2">
+                       <label className="font-medium">Target Size (KB)</label>
+                     </div>
+                     <input 
+                       type="number" 
+                       value={targetSize} 
+                       onChange={(e) => setTargetSize(e.target.value ? parseInt(e.target.value) : '')}
+                       placeholder="e.g. 100"
+                       className="w-full bg-background text-foreground border rounded-md px-3 py-2 text-sm focus:ring-1 focus:ring-primary outline-none"
+                     />
+                   </div>
+                 )}
+
                  <div>
                    <label className="block text-sm font-medium mb-2">Convert Format (Optional)</label>
                    <select 
                      value={outputFormat} 
                      onChange={(e) => setOutputFormat(e.target.value)}
-                     className="w-full bg-background border border-input rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+                     className="w-full bg-background text-foreground border border-input rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
                    >
                      <option value="original">Keep Original Format</option>
                      <option value="jpg">JPG (Best for photos)</option>
                      <option value="png">PNG (Best for transparency)</option>
                      <option value="webp">WebP (Modern, highly compressed)</option>
+                      <option value="avif">AVIF (Next-gen compression)</option>
                    </select>
                  </div>
 

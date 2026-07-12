@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Convert PDF files into editable PowerPoint presentations with AI-powered slide detection, OCR, layout preservation and responsive cloud processing.',
 };
 
-export default function PdfToPowerpointPage() {
+export default function Page() {
   return (
     <>
       <script

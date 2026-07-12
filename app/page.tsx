@@ -3,7 +3,17 @@ import { Zap, Shield, LayoutGrid, CheckCircle2 } from "lucide-react";
 import { toolsData, allTools } from "@/lib/tools";
 import ToolSearch from "@/components/tool-search";
 
+import { Suspense } from "react";
+
 export default function Home() {
+  return (
+    <Suspense fallback={<div className="min-h-screen" />}>
+      <HomeInner />
+    </Suspense>
+  );
+}
+
+function HomeInner() {
   const popularTools = allTools.filter(t => t.isPopular).slice(0, 4);
   const featuredTools = allTools.filter(t => t.isNew || t.isPopular).slice(0, 9);
 

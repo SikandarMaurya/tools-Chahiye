@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Summarize articles, reports, PDFs and documents instantly with AI. Generate concise, accurate summaries, bullet points and key takeaways.',
 };
 
-export default function ContentSummarizerPage() {
+export default function Page() {
   return (
     <>
       <script

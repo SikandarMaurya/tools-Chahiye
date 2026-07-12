@@ -2,11 +2,11 @@ import { Metadata } from 'next';
 import ImageCompressor from '@/components/image-compressor';
 
 export const metadata: Metadata = {
-  title: 'Free AI Image Compressor | Compress JPG, PNG, WebP & AVIF Online',
-  description: 'Compress images online without losing quality. Supports JPG, PNG, WebP and AVIF with AI-powered optimization and batch compression.',
+  title: 'Compress Image Online | AI Image Compressor Free',
+  description: 'Compress JPG, PNG, WEBP, AVIF and other image formats online using AI-powered optimization with batch compression and enterprise-grade performance.',
 };
 
-export default function ImageCompressorPage() {
+export default function Page() {
   return (
     <>
       <script
@@ -16,10 +16,10 @@ export default function ImageCompressorPage() {
             {
               '@context': 'https://schema.org',
               '@type': 'SoftwareApplication',
-              name: 'AI Image Compressor',
+              name: 'Smart Image Compressor',
               applicationCategory: 'MultimediaApplication',
               operatingSystem: 'Any',
-              description: 'Compress images online without losing quality. Supports JPG, PNG, WebP and AVIF with AI-powered optimization and batch compression.',
+              description: 'Compress JPG, PNG, WEBP, AVIF and other image formats online using AI-powered optimization with batch compression and enterprise-grade performance.',
             },
             {
               '@context': 'https://schema.org',
@@ -40,7 +40,7 @@ export default function ImageCompressorPage() {
                 {
                   '@type': 'ListItem',
                   position: 3,
-                  name: 'AI Image Compressor',
+                  name: 'Smart Image Compressor',
                   item: 'https://toolschahiye.com/image-tools/image-compressor',
                 }
               ],

@@ -238,20 +238,20 @@ export default function ContentSummarizer() {
                <div className="p-4 space-y-4">
                   <div>
                     <label className="block text-xs font-medium text-neutral-500 mb-1.5">Summary Mode</label>
-                    <select value={mode} onChange={(e) => setMode(e.target.value)} className="w-full text-sm border-neutral-200 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500 py-2">
+                    <select value={mode} onChange={(e) => setMode(e.target.value)} className="bg-background text-foreground w-full text-sm border-neutral-200 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500 py-2">
                        {MODES.map(m => <option key={m} value={m}>{m}</option>)}
                     </select>
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-medium text-neutral-500 mb-1.5">Style</label>
-                      <select value={style} onChange={(e) => setStyle(e.target.value)} className="w-full text-sm border-neutral-200 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500 py-2">
+                      <select value={style} onChange={(e) => setStyle(e.target.value)} className="bg-background text-foreground w-full text-sm border-neutral-200 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500 py-2">
                          {STYLES.map(s => <option key={s} value={s}>{s}</option>)}
                       </select>
                     </div>
                     <div>
                       <label className="block text-xs font-medium text-neutral-500 mb-1.5">Output Language</label>
-                      <select value={language} onChange={(e) => setLanguage(e.target.value)} className="w-full text-sm border-neutral-200 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500 py-2">
+                      <select value={language} onChange={(e) => setLanguage(e.target.value)} className="bg-background text-foreground w-full text-sm border-neutral-200 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500 py-2">
                          {LANGUAGES.map(l => <option key={l} value={l}>{l}</option>)}
                       </select>
                     </div>

@@ -185,32 +185,32 @@ export default function SeoMetaGenerator() {
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-medium text-neutral-700 mb-1.5">Page Type</label>
-                      <select name="pageType" value={inputs.pageType} onChange={handleInputChange} className="w-full text-sm border border-neutral-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500 py-2 px-2">
+                      <select name="pageType" value={inputs.pageType} onChange={handleInputChange} className="bg-background text-foreground w-full text-sm border border-neutral-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500 py-2 px-2">
                          {PAGE_TYPES.map(t => <option key={t} value={t}>{t}</option>)}
                       </select>
                     </div>
                     <div>
                       <label className="block text-xs font-medium text-neutral-700 mb-1.5">Business</label>
-                      <select name="businessType" value={inputs.businessType} onChange={handleInputChange} className="w-full text-sm border border-neutral-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500 py-2 px-2">
+                      <select name="businessType" value={inputs.businessType} onChange={handleInputChange} className="bg-background text-foreground w-full text-sm border border-neutral-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500 py-2 px-2">
                          <option value="">Select...</option>
                          {BUSINESS_TYPES.map(t => <option key={t} value={t}>{t}</option>)}
                       </select>
                     </div>
                     <div>
                       <label className="block text-xs font-medium text-neutral-700 mb-1.5">Tone</label>
-                      <select name="tone" value={inputs.tone} onChange={handleInputChange} className="w-full text-sm border border-neutral-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500 py-2 px-2">
+                      <select name="tone" value={inputs.tone} onChange={handleInputChange} className="bg-background text-foreground w-full text-sm border border-neutral-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500 py-2 px-2">
                          {TONES.map(t => <option key={t} value={t}>{t}</option>)}
                       </select>
                     </div>
                     <div>
                       <label className="block text-xs font-medium text-neutral-700 mb-1.5">Country</label>
-                      <select name="targetCountry" value={inputs.targetCountry} onChange={handleInputChange} className="w-full text-sm border border-neutral-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500 py-2 px-2">
+                      <select name="targetCountry" value={inputs.targetCountry} onChange={handleInputChange} className="bg-background text-foreground w-full text-sm border border-neutral-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500 py-2 px-2">
                          {COUNTRIES.map(t => <option key={t} value={t}>{t}</option>)}
                       </select>
                     </div>
                     <div className="col-span-2">
                       <label className="block text-xs font-medium text-neutral-700 mb-1.5">Language</label>
-                      <select name="language" value={inputs.language} onChange={handleInputChange} className="w-full text-sm border border-neutral-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500 py-2 px-2">
+                      <select name="language" value={inputs.language} onChange={handleInputChange} className="bg-background text-foreground w-full text-sm border border-neutral-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500 py-2 px-2">
                          {LANGUAGES.map(t => <option key={t} value={t}>{t}</option>)}
                       </select>
                     </div>

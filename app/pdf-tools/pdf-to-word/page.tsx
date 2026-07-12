@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Convert PDF files into editable Word documents online with AI-powered layout preservation, OCR support, and high accuracy.',
 };
 
-export default function PdfToWordPage() {
+export default function Page() {
   return (
     <>
       <script
