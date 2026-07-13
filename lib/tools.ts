@@ -51,6 +51,14 @@ export const toolsData: Category[] = [
         icon: ImageIcon,
         href: "/ai-tools/background-remover",
         isNew: true,
+      },
+      {
+        id: "ai-image-upscaler",
+        title: "AI Image Upscaler",
+        description: "Enlarge images up to 8x with face restoration, noise reduction, and detail reconstruction.",
+        icon: ImageIcon,
+        href: "/image-tools/ai-image-upscaler",
+        isNew: true,
       }
     ],
   },
@@ -238,6 +246,15 @@ export const toolsData: Category[] = [
     icon: ImageIcon,
     href: "/image-tools",
     tools: [
+      {
+        id: "ai-image-upscaler",
+        title: "AI Image Upscaler",
+        description: "Enlarge images up to 8x with face restoration, noise reduction, and detail reconstruction.",
+        icon: ImageIcon,
+        href: "/image-tools/ai-image-upscaler",
+        isNew: true,
+        isPopular: true,
+      },
       {
         id: "background-remover",
         title: "AI Background Remover",

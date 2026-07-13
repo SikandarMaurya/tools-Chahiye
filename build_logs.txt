@@ -1,0 +1,85 @@
+
+> ai-studio-applet@0.1.0 build
+> NODE_ENV=production NODE_OPTIONS='--max-old-space-size=1536' next build
+
+  ▲ Next.js 14.2.15
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/58) ...
+   Generating static pages (14/58) 
+   Generating static pages (28/58) 
+   Generating static pages (43/58) 
+ ✓ Generating static pages (58/58)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    4.36 kB        98.7 kB
+├ ○ /_not-found                          176 B          87.7 kB
+├ ○ /about                               176 B          87.7 kB
+├ ○ /ai-tools                            204 B          94.5 kB
+├ ○ /ai-tools/ai-content-summarizer      5.79 kB        93.3 kB
+├ ○ /ai-tools/ai-image-generator         11.4 kB        98.9 kB
+├ ○ /ai-tools/background-remover         176 B          87.7 kB
+├ ƒ /api/enhance-prompt                  0 B                0 B
+├ ƒ /api/generate-image                  0 B                0 B
+├ ƒ /api/seo-generator                   0 B                0 B
+├ ƒ /api/summarize                       0 B                0 B
+├ ○ /categories                          204 B          94.5 kB
+├ ○ /contact                             176 B          87.7 kB
+├ ○ /cookie                              176 B          87.7 kB
+├ ○ /developer-tools                     204 B          94.5 kB
+├ ○ /developer-tools/json-beautifier     2.32 kB        89.8 kB
+├ ○ /developer-tools/regex-tester        7.02 kB        94.5 kB
+├ ○ /disclaimer                          176 B          87.7 kB
+├ ○ /image-tools                         204 B          94.5 kB
+├ ○ /image-tools/ai-image-upscaler       6.61 kB        94.1 kB
+├ ○ /image-tools/background-remover      7.12 kB        94.6 kB
+├ ○ /image-tools/crop-image              10.2 kB        97.7 kB
+├ ○ /image-tools/image-compressor        6.21 kB         129 kB
+├ ○ /image-tools/image-converter         6.5 kB          129 kB
+├ ○ /image-tools/resize-image            7.43 kB         130 kB
+├ ○ /pdf-tools                           204 B          94.5 kB
+├ ○ /pdf-tools/compress-pdf              4.14 kB         446 kB
+├ ○ /pdf-tools/delete-pdf-pages          4.59 kB         447 kB
+├ ○ /pdf-tools/extract-pdf-pages         4.38 kB         474 kB
+├ ○ /pdf-tools/jpg-to-pdf                20.9 kB         328 kB
+├ ○ /pdf-tools/merge-pdf                 3.67 kB         311 kB
+├ ○ /pdf-tools/ocr-pdf                   11.1 kB         250 kB
+├ ○ /pdf-tools/pdf-editor                7.93 kB         462 kB
+├ ○ /pdf-tools/pdf-to-excel              97.9 kB         337 kB
+├ ○ /pdf-tools/pdf-to-image              5.34 kB         272 kB
+├ ○ /pdf-tools/pdf-to-jpg                176 B          87.7 kB
+├ ○ /pdf-tools/pdf-to-powerpoint         4.36 kB         244 kB
+├ ○ /pdf-tools/pdf-to-word               101 kB          340 kB
+├ ○ /pdf-tools/powerpoint-to-pdf         3.85 kB         294 kB
+├ ○ /pdf-tools/protect-pdf               10.1 kB         452 kB
+├ ○ /pdf-tools/reorder-pdf-pages         4.75 kB         464 kB
+├ ○ /pdf-tools/rotate-pdf                43.8 kB         486 kB
+├ ○ /pdf-tools/sign-pdf                  10.4 kB         465 kB
+├ ○ /pdf-tools/split-pdf                 4.56 kB         474 kB
+├ ○ /pdf-tools/unlock-pdf                9.13 kB         451 kB
+├ ○ /pdf-tools/watermark-pdf             6.08 kB         448 kB
+├ ○ /pdf-tools/word-to-pdf               96.7 kB         422 kB
+├ ○ /privacy                             176 B          87.7 kB
+├ ○ /robots.txt                          0 B                0 B
+├ ○ /search                              176 B          87.7 kB
+├ ○ /seo-tools                           204 B          94.5 kB
+├ ○ /seo-tools/seo-meta-generator        7.2 kB         94.7 kB
+├ ○ /sitemap.xml                         0 B                0 B
+├ ○ /terms                               176 B          87.7 kB
+├ ○ /text-tools                          204 B          94.5 kB
+└ ○ /utility-tools                       204 B          94.5 kB
++ First Load JS shared by all            87.5 kB
+  ├ chunks/2117-72e436c001db5e85.js      31.8 kB
+  ├ chunks/fd9d1056-e54eea807dec0e3b.js  53.6 kB
+  └ other shared chunks (total)          2.1 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
