@@ -1,4 +1,20 @@
-import { Search, Zap, Shield, Sparkles, FileText, Image as ImageIcon, Code, ArrowRight, LayoutGrid, CheckCircle2, Target, Type, Wrench } from "lucide-react";
+import {
+  Eraser,
+  Wand2,
+  Search,
+  Zap,
+  Shield,
+  Sparkles,
+  FileText,
+  Image as ImageIcon,
+  Code,
+  ArrowRight,
+  LayoutGrid,
+  CheckCircle2,
+  Target,
+  Type,
+  Wrench,
+} from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 export interface Tool {
@@ -29,9 +45,30 @@ export const toolsData: Category[] = [
     href: "/ai-tools",
     tools: [
       {
+        id: "ai-object-remover",
+        title: "AI Object Remover",
+        description:
+          "Remove unwanted objects, people, or text from photos and seamlessly reconstruct the background using AI.",
+        href: "/image-tools/ai-object-remover",
+        icon: Eraser,
+        isNew: true,
+        isPopular: true,
+      },
+      {
+        id: "ai-photo-enhancer",
+        title: "AI Photo Enhancer",
+        description:
+          "Enhance image quality, fix colors, reduce noise, and recover details automatically with AI.",
+        href: "/image-tools/ai-photo-enhancer",
+        icon: Wand2,
+        isNew: true,
+        isPopular: true,
+      },
+      {
         id: "ai-image-generator",
         title: "AI Image Generator",
-        description: "Generate stunning AI images, thumbnails, and logos from text prompts.",
+        description:
+          "Generate stunning AI images, thumbnails, and logos from text prompts.",
         icon: ImageIcon,
         href: "/ai-tools/ai-image-generator",
         isNew: true,
@@ -40,7 +77,8 @@ export const toolsData: Category[] = [
       {
         id: "ai-content-summarizer",
         title: "AI Content Summarizer",
-        description: "Instantly summarize long articles, documents, and text into key points.",
+        description:
+          "Instantly summarize long articles, documents, and text into key points.",
         icon: FileText,
         href: "/ai-tools/ai-content-summarizer",
       },
@@ -55,11 +93,12 @@ export const toolsData: Category[] = [
       {
         id: "ai-image-upscaler",
         title: "AI Image Upscaler",
-        description: "Enlarge images up to 8x with face restoration, noise reduction, and detail reconstruction.",
+        description:
+          "Enlarge images up to 8x with face restoration, noise reduction, and detail reconstruction.",
         icon: ImageIcon,
         href: "/image-tools/ai-image-upscaler",
         isNew: true,
-      }
+      },
     ],
   },
   {
@@ -103,7 +142,8 @@ export const toolsData: Category[] = [
       {
         id: "unlock-pdf",
         title: "Unlock PDF",
-        description: "Remove passwords and security restrictions from PDF files.",
+        description:
+          "Remove passwords and security restrictions from PDF files.",
         icon: FileText,
         href: "/pdf-tools/unlock-pdf",
         isNew: true,
@@ -111,7 +151,8 @@ export const toolsData: Category[] = [
       {
         id: "protect-pdf",
         title: "Protect PDF",
-        description: "Secure PDF files with password encryption and permissions.",
+        description:
+          "Secure PDF files with password encryption and permissions.",
         icon: FileText,
         href: "/pdf-tools/protect-pdf",
         isNew: true,
@@ -158,7 +199,8 @@ export const toolsData: Category[] = [
       {
         id: "pdf-editor",
         title: "PDF Editor",
-        description: "Edit PDF online with AI-powered text editing, image editing, OCR, and annotations.",
+        description:
+          "Edit PDF online with AI-powered text editing, image editing, OCR, and annotations.",
         icon: FileText,
         href: "/pdf-tools/pdf-editor",
         isNew: true,
@@ -167,7 +209,8 @@ export const toolsData: Category[] = [
       {
         id: "ocr-pdf",
         title: "OCR PDF",
-        description: "Extract editable text from scanned PDF files using AI OCR.",
+        description:
+          "Extract editable text from scanned PDF files using AI OCR.",
         icon: FileText,
         href: "/pdf-tools/ocr-pdf",
         isNew: true,
@@ -216,7 +259,8 @@ export const toolsData: Category[] = [
       {
         id: "powerpoint-to-pdf",
         title: "PowerPoint to PDF",
-        description: "Convert PowerPoint presentations into professional PDF documents.",
+        description:
+          "Convert PowerPoint presentations into professional PDF documents.",
         icon: FileText,
         href: "/pdf-tools/powerpoint-to-pdf",
         isNew: true,
@@ -224,7 +268,8 @@ export const toolsData: Category[] = [
       {
         id: "pdf-to-powerpoint",
         title: "PDF to PowerPoint",
-        description: "Convert PDF files into editable PowerPoint presentations.",
+        description:
+          "Convert PDF files into editable PowerPoint presentations.",
         icon: FileText,
         href: "/pdf-tools/pdf-to-powerpoint",
         isNew: true,
@@ -232,11 +277,12 @@ export const toolsData: Category[] = [
       {
         id: "pdf-to-image",
         title: "PDF to Image",
-        description: "Convert PDF pages into high-resolution JPG, PNG, WebP, and TIFF images.",
+        description:
+          "Convert PDF pages into high-resolution JPG, PNG, WebP, and TIFF images.",
         icon: FileText,
         href: "/pdf-tools/pdf-to-image",
         isNew: true,
-      }
+      },
     ],
   },
   {
@@ -247,9 +293,30 @@ export const toolsData: Category[] = [
     href: "/image-tools",
     tools: [
       {
+        id: "ai-object-remover",
+        title: "AI Object Remover",
+        description:
+          "Remove unwanted objects, people, or text from photos and seamlessly reconstruct the background using AI.",
+        href: "/image-tools/ai-object-remover",
+        icon: Eraser,
+        isNew: true,
+        isPopular: true,
+      },
+      {
+        id: "ai-photo-enhancer",
+        title: "AI Photo Enhancer",
+        description:
+          "Enhance image quality, fix colors, reduce noise, and recover details automatically with AI.",
+        href: "/image-tools/ai-photo-enhancer",
+        icon: Wand2,
+        isNew: true,
+        isPopular: true,
+      },
+      {
         id: "ai-image-upscaler",
         title: "AI Image Upscaler",
-        description: "Enlarge images up to 8x with face restoration, noise reduction, and detail reconstruction.",
+        description:
+          "Enlarge images up to 8x with face restoration, noise reduction, and detail reconstruction.",
         icon: ImageIcon,
         href: "/image-tools/ai-image-upscaler",
         isNew: true,
@@ -258,7 +325,8 @@ export const toolsData: Category[] = [
       {
         id: "background-remover",
         title: "AI Background Remover",
-        description: "Remove image backgrounds instantly with AI. Export as transparent PNG.",
+        description:
+          "Remove image backgrounds instantly with AI. Export as transparent PNG.",
         icon: ImageIcon,
         href: "/image-tools/background-remover",
         isNew: true,
@@ -267,7 +335,8 @@ export const toolsData: Category[] = [
       {
         id: "crop-image",
         title: "Smart Image Cropper",
-        description: "Crop images online using AI Smart Crop, face detection, and social media presets.",
+        description:
+          "Crop images online using AI Smart Crop, face detection, and social media presets.",
         icon: ImageIcon,
         href: "/image-tools/crop-image",
         isNew: true,
@@ -276,7 +345,8 @@ export const toolsData: Category[] = [
       {
         id: "resize-image",
         title: "AI Image Resizer",
-        description: "Resize, optimize, and scale images for web and social media.",
+        description:
+          "Resize, optimize, and scale images for web and social media.",
         icon: ImageIcon,
         href: "/image-tools/resize-image",
         isNew: true,
@@ -285,7 +355,8 @@ export const toolsData: Category[] = [
       {
         id: "image-converter",
         title: "Universal Image Converter",
-        description: "Convert images between JPG, PNG, WebP, AVIF, BMP, and more.",
+        description:
+          "Convert images between JPG, PNG, WebP, AVIF, BMP, and more.",
         icon: ImageIcon,
         href: "/image-tools/image-converter",
         isNew: true,
@@ -294,18 +365,20 @@ export const toolsData: Category[] = [
       {
         id: "image-compressor",
         title: "AI Image Compressor",
-        description: "Smartly compress JPG, PNG, WebP & AVIF images online without losing quality.",
+        description:
+          "Smartly compress JPG, PNG, WebP & AVIF images online without losing quality.",
         icon: ImageIcon,
         href: "/image-tools/image-compressor",
         isNew: true,
         isPopular: true,
-      }
+      },
     ],
   },
   {
     id: "developer-tools",
     name: "Developer Tools",
-    description: "Handy tools for developers: formatters, validators, and testers.",
+    description:
+      "Handy tools for developers: formatters, validators, and testers.",
     icon: Code,
     href: "/developer-tools",
     tools: [
@@ -323,24 +396,26 @@ export const toolsData: Category[] = [
         description: "Test and debug Regular Expressions in real-time.",
         icon: Code,
         href: "/developer-tools/regex-tester",
-      }
+      },
     ],
   },
   {
     id: "seo-tools",
     name: "SEO Tools",
-    description: "Boost your website's visibility with SEO generators and analyzers.",
+    description:
+      "Boost your website's visibility with SEO generators and analyzers.",
     icon: Target,
     href: "/seo-tools",
     tools: [
       {
         id: "seo-meta-generator",
         title: "AI SEO Meta Generator",
-        description: "Generate complete SEO meta tags, Open Graph, and JSON-LD schema.",
+        description:
+          "Generate complete SEO meta tags, Open Graph, and JSON-LD schema.",
         icon: Target,
         href: "/seo-tools/seo-meta-generator",
         isNew: true,
-      }
+      },
     ],
   },
   {
@@ -358,16 +433,17 @@ export const toolsData: Category[] = [
     icon: Wrench,
     href: "/utility-tools",
     tools: [],
-  }
+  },
 ];
 
-export const allTools: Tool[] = toolsData.flatMap(category => category.tools);
+export const allTools: Tool[] = toolsData.flatMap((category) => category.tools);
 
 export function searchTools(query: string): Tool[] {
   if (!query) return [];
   const lowerQuery = query.toLowerCase();
-  return allTools.filter(tool => 
-    tool.title.toLowerCase().includes(lowerQuery) || 
-    tool.description.toLowerCase().includes(lowerQuery)
+  return allTools.filter(
+    (tool) =>
+      tool.title.toLowerCase().includes(lowerQuery) ||
+      tool.description.toLowerCase().includes(lowerQuery),
   );
 }
