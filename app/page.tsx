@@ -41,21 +41,6 @@ function HomeInner() {
           <div className="w-full max-w-2xl mb-10">
             <ToolSearch />
           </div>
-
-          <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-muted-foreground">
-            <span className="font-medium mr-2">Popular:</span>
-            {popularTools.map((tool, i) => (
-              <span key={tool.id}>
-                <Link
-                  href={tool.href}
-                  className="hover:text-primary transition-colors hover:underline"
-                >
-                  {tool.title}
-                </Link>
-                {i < popularTools.length - 1 && " • "}
-              </span>
-            ))}
-          </div>
         </div>
       </section>
 
