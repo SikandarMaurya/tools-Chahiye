@@ -32,7 +32,7 @@ export default function TestimonialsSection() {
             Loved by Professionals
           </h2>
           <p className="text-muted-foreground text-lg">
-            Don't just take our word for it.
+            Don&apos;t just take our word for it.
           </p>
         </div>
 
@@ -55,7 +55,7 @@ export default function TestimonialsSection() {
                   />
                 ))}
               </div>
-              <p className="text-lg font-medium mb-8">"{t.text}"</p>
+              <p className="text-lg font-medium mb-8">&quot;{t.text}&quot;</p>
               <div>
                 <h4 className="font-bold">{t.name}</h4>
                 <p className="text-sm text-muted-foreground">{t.role}</p>

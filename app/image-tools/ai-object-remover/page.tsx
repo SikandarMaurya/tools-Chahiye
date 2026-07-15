@@ -127,7 +127,7 @@ export default function AIObjectRemoverPage() {
                   AI Reconstruction
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  Click 'Remove Object'. Our AI seamlessly deletes the selection
+                  Click &apos;Remove Object&apos;. Our AI seamlessly deletes the selection
                   and perfectly recreates the background behind it.
                 </p>
               </div>

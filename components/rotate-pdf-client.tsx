@@ -54,7 +54,7 @@ export default function RotatePdfClient() {
       pages.forEach(p => URL.revokeObjectURL(p.thumbnailUrl));
       if (resultPdfUrl) URL.revokeObjectURL(resultPdfUrl);
     };
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleFileUpload = async (uploadedFile: File) => {
     if (uploadedFile.type !== 'application/pdf') {

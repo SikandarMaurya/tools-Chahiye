@@ -436,7 +436,7 @@ export const toolsData: Category[] = [
   },
 ];
 
-export const allTools: Tool[] = toolsData.flatMap((category) => category.tools);
+export const allTools: Tool[] = Array.from(new Map(toolsData.flatMap((category) => category.tools).map((tool) => [tool.id, tool])).values());
 
 export function searchTools(query: string): Tool[] {
   if (!query) return [];

@@ -19,7 +19,7 @@ function BreadcrumbsInner() {
   const pathname = usePathname();
   
   // Don't show breadcrumbs on home page
-  if (pathname === '/') return null;
+  if (!pathname || pathname === '/') return null;
 
   const paths = pathname.split('/').filter(Boolean);
   

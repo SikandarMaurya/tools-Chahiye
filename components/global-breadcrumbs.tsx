@@ -16,7 +16,7 @@ export default function GlobalBreadcrumbs() {
 function GlobalBreadcrumbsInner() {
   const pathname = usePathname();
   
-  if (pathname === '/') return null;
+  if (!pathname || pathname === '/') return null;
   
   return (
     <div className="container mx-auto px-4 pt-6 pb-2">

@@ -15,7 +15,7 @@ export default function AIPlatformSection() {
             Meet Our AI Engines
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            We don't just use AI; we've built our platform around it.
+            We don&apos;t just use AI; we&apos;ve built our platform around it.
           </p>
         </div>
 

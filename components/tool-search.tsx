@@ -7,19 +7,16 @@ import { searchTools, Tool, allTools } from "@/lib/tools";
 
 export default function ToolSearch() {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState<Tool[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
 
-  useEffect(() => {
-    if (query.trim()) {
-      setResults(searchTools(query));
-      setIsOpen(true);
-    } else {
-      setResults([]);
-      setIsOpen(false);
-    }
-  }, [query]);
+  const results = query.trim() ? searchTools(query) : [];
+
+  const handleQueryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newQuery = e.target.value;
+    setQuery(newQuery);
+    setIsOpen(!!newQuery.trim());
+  };
 
   return (
     <div className="relative flex-grow z-50">
@@ -28,7 +25,7 @@ export default function ToolSearch() {
         <input
           type="search"
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={handleQueryChange}
           onFocus={() => {
             setIsFocused(true);
             if (query.trim()) setIsOpen(true);
@@ -67,7 +64,7 @@ export default function ToolSearch() {
 
       {isOpen && query.trim() && results.length === 0 && (
         <div className="absolute top-full left-0 right-0 mt-2 bg-card border rounded-lg shadow-xl p-4 text-center text-sm text-muted-foreground">
-          No tools found for "{query}"
+          No tools found for &quot;{query}&quot;
         </div>
       )}
 

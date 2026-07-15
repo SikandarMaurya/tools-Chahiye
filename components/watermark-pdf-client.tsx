@@ -66,7 +66,7 @@ export default function WatermarkPdfClient() {
       if (previewThumbnail) URL.revokeObjectURL(previewThumbnail);
       if (imagePreviewUrl) URL.revokeObjectURL(imagePreviewUrl);
     };
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleFileUpload = async (uploadedFile: File) => {
     if (uploadedFile.type !== 'application/pdf') {

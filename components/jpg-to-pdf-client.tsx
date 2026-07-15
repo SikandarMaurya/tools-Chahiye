@@ -67,7 +67,7 @@ export default function JpgToPdfClient() {
       files.forEach((f) => URL.revokeObjectURL(f.previewUrl));
       if (resultPdf) URL.revokeObjectURL(resultPdf);
     };
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const sensors = useSensors(
     useSensor(PointerSensor, {

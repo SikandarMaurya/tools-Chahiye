@@ -206,7 +206,7 @@ export default function AIPhotoEnhancerPage() {
               without the need for complex editing software like Photoshop.
             </p>
             <p>
-              Whether you're a photographer looking to rescue a poorly lit
+              Whether you&apos;re a photographer looking to rescue a poorly lit
               portrait, a business preparing e-commerce product images, or just
               wanting to improve a favorite memory, our one-click AI does the
               heavy lifting instantly in your browser.
