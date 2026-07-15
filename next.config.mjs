@@ -14,8 +14,20 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'picsum.photos',
         port: '',
-        pathname: '/**', // This allows any path under the hostname
+        pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.pravatar.cc',
+        port: '',
+        pathname: '/**',
+      }
     ],
   },
   experimental: {
@@ -23,5 +35,4 @@ const nextConfig = {
     memoryBasedWorkersCount: false,
   },
 };
-
 export default nextConfig;

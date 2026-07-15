@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { ContactClient } from '@/components/contact/client';
-import { Header } from '@/components/header';
-import { Footer } from '@/components/footer';
+
+
 
 export const metadata: Metadata = {
   title: 'Contact Us | Premium Support & Sales',
@@ -50,9 +50,9 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Header />
+      
       <ContactClient />
-      <Footer />
+      
     </>
   );
 }

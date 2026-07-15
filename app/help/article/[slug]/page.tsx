@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import ArticleClient from '@/components/help/article/client';
-import { Header } from '@/components/header';
-import { Footer } from '@/components/footer';
+
+
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
@@ -57,9 +57,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Header />
+      
       <ArticleClient title={title} />
-      <Footer />
+      
     </>
   );
 }

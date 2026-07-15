@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { HelpClient } from '@/components/help/client';
-import { Header } from '@/components/header';
-import { Footer } from '@/components/footer';
+
+
 
 export const metadata: Metadata = {
   title: 'Help Center | Tutorials & Documentation',
@@ -46,9 +46,9 @@ export default function HelpPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Header />
+      
       <HelpClient />
-      <Footer />
+      
     </>
   );
 }

@@ -19,6 +19,7 @@ export function Header() {
     { name: "Categories", href: "/categories" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
+    { name: "Help", href: "/help" }, { name: "Blog", href: "/blog" },
   ];
 
   return (
